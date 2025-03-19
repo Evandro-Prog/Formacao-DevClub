@@ -1,0 +1,65 @@
+<!--HTML -> Hyper Text Language Markup 
+    TAGS -> São os elementos de marcação do HTML, ou seja dizem o que é cada coisa na pagina
+    CSS -> Cascading Style Sheets, linguagem de estilo que definem como os elementos HTML são apresentados,
+    prevalesce sempre o que vem em baixo, pois os estilos são aplicados em cascata (de cima para baixo)-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--Padrão de caracteres usados no ocidente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mario Bros</title>
+</head>
+
+<body>
+
+    <div class="form-mask"></div>
+
+    <div class="header">
+        <img src="./img/icon.png" alt="mario-head">
+        <a>Home</a>
+        <a>Nossos Serviços</a>
+        <a>Fale Conosco</a>
+    </div>
+
+    <div class="mother">
+        <div class="principal"> <!--DIV -> Ajudam na organização dos elementos da pagina-->
+            <img src="./img/logo.png" alt="Logo Super Mario" class="logo-mario">
+            <!-- alt -> Texto alternativo, caso imagem nao apareça ou é usado com apps de acessibilidade-->
+
+            <p>Encanadores Mario & Luigi - Resolvendo seus problemas hidraulicos com estilo</p>
+            <p>Voce já se encontrou em uma situação de emergencia com encanamentos? Vazamentos
+                inesperados, canos entupidos ou torneiraas que não param de pingar? Não se preocupe,
+                porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos
+                do Reino dos Cogumelos - Mario e Luigi!</p>
+
+            <button>entre em contato</button>
+        </div>
+
+        <div>
+            <img src="./img/mario.png" alt="Mario & Luigi" class="mario-luigi">
+        </div>
+
+    </div>
+
+    <div class="video">
+        <video src="./img/video.mp4" autoplay muted loop></video>
+        <div class="mask"></div>
+    </div>
+
+    <a href="https://wa.me/5511985195583?text=Ol%C3%A1%2C%20preciso%20da%20ajuda%20dos%20irm%C3%A3os%20Mario%20e%20Luigi!!!" class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="Whatsapp">
+    </a>
+
+    <form class="formulario-fale-conosco">
+        <input placeholder="Seu Nome">
+        <input placeholder="Seu Telefone">
+        <textarea placeholder="Digite seu problema aqui."></textarea>
+        <button>PEDIR ORÇAMENTO</button>
+    </form>
+
+</body>
+
+</html>
