@@ -15,7 +15,8 @@
 
 <body>
 
-    <div class="form-mask"></div>
+    <div 
+    class="form-mask" onclick="hiddenform()"></div>
 
     <div class="header">
         <img src="./img/icon.png" alt="mario-head">
@@ -35,7 +36,7 @@
                 porque estamos aqui para salvar o dia! Apresentamos a vocês os encanadores mais famosos
                 do Reino dos Cogumelos - Mario e Luigi!</p>
 
-            <button>entre em contato</button>
+            <button onclick="showform()">entre em contato</button>
         </div>
 
         <div>
@@ -53,13 +54,19 @@
         <img src="./img/whatsapp.png" alt="Whatsapp">
     </a>
 
-    <form class="formulario-fale-conosco">
-        <input placeholder="Seu Nome">
-        <input placeholder="Seu Telefone">
-        <textarea placeholder="Digite seu problema aqui."></textarea>
-        <button>PEDIR ORÇAMENTO</button>
+    <form 
+        action="https://formcarry.com/s/G9vtvPlHSVd"
+        method="POST"
+        enctype="multipart/form-data"
+    class="formulario-fale-conosco">
+        <input placeholder="Seu Nome" type="text" name="Nome">
+        <input placeholder="Seu Telefone" type="tel" name="Telefone">
+        <textarea placeholder="Digite seu problema aqui." name="Duvidas"></textarea>
+        <button type="submit">PEDIR ORÇAMENTO</button>
     </form>
 
 </body>
+
+<script src="./scripts.js"></script>
 
 </html>
