@@ -148,3 +148,51 @@ textarea {
     transition: visibility 1s ease-in-outS;
 }
 
+@media(max-width: 1100px){
+
+    p {
+        display: none;
+    }
+
+    .mother {
+        flex-direction: column;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .header a {
+        font-size: 20px;
+    }
+
+    .link-whatsapp img {
+        height: 50px;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
