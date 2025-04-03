@@ -1,23 +1,27 @@
 const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
 
-function convertValues() {
+async function convertValues() {
 
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
-    const currencyValueConverted = document.querySelector(".currency-value")
+    const currencyValueConverted = document.querySelector(".currency-value")   
 
-    const dolarToday = 5.75
-    const euroToday = 6.20
-    const libraToday = 7.45
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL").then(response => response.json())
     
+    console.log(data)
+
+    const dolar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const libra = data.GBPBRL.high
+
 
     if (currencySelect.value == "dolar") {
 
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
-        }).format(inputCurrencyValue / dolarToday)
+        }).format(inputCurrencyValue / dolar)
     }
 
     if (currencySelect.value == "euro") {
@@ -25,7 +29,7 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
-        }).format(inputCurrencyValue / euroToday)
+        }).format(inputCurrencyValue / euro)
     }
 
     if (currencySelect.value == "libra") {
@@ -33,7 +37,7 @@ function convertValues() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
-        }).format(inputCurrencyValue / libraToday)
+        }).format(inputCurrencyValue / libra)
     }
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
